@@ -4,11 +4,4 @@ angular.module('jumboClient').controller('DetailsCtrl', ['$state', '$scope', '$s
 
   $scope.items="AICI SUNT DETALII ID:"+$stateParams.id;
 
-        function get(id) {
-          return $http.get('/links/'+id);
-        }
-get(6);
-
-
-
 }]);

@@ -33,7 +33,7 @@ $scope.show = function() {
 };
 
 $scope.goToDetails = function(id){
-  $state.transitionTo('main.details', {id:1});
+  $state.transitionTo('main.details', {id: $scope.allShops[0].id});
 }
 
 /* ITEMS MANAGEMENT */
@@ -68,22 +68,28 @@ $scope.remove =function(id){
 function getItems(){
 
     // I would most probably need an ajax call to the server to the endpoint which returns all the shops
-    GeoItem.getShopLocations().then((items) => {
-        console.log(items);
-    })
+    GeoItem.getShopLocations().then((itemsReturned) => {
+        $scope.items = [{id: 123, title: 'Lidl', lat: '46.775577', lon: '24.701044', description:"Reghin, Str.Apalinei, nr.1}];
+        getMarkers($scope.items);
+        console.log("Current scope items: ", $scope.items);
+    });
 
-	/*
-  GeoItem.selectAll().then(function(items){
-		console.log(items);
-		$scope.items = items;
-    getMarkers(items);
-	});*/
 
-    $scope.items = [{id:123, title: 'test', lat: '46.784010', lon: '23.556620', description: '123'}];
-    getMarkers($scope.items);
+    //$scope.items = [{id:123, title: 'test', lat: '46.784010', lon: '23.556620', description: '123'}];
 }
 
-getItems();
+if($scope.isLoggedIn){
+    getItems();
+}
+
+function getShops(){
+    GeoItem.getAllShopsFromServer(1, 5).then((allShopsWithDetails) => {
+        $scope.allShops = allShopsWithDetails.data;
+        console.log("All shops returned from server: ", $scope.allShops);
+    });
+}
+
+getShops();
 
 
 /* MARKERS MANAGEMENT */

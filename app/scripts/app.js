@@ -67,6 +67,11 @@ jumboClient.config(function($stateProvider, $urlRouterProvider, $httpProvider, u
             templateUrl: '/views/authentication/signUp.html'
         })
 
+        .state('main.contact', {
+                    url: '/contact',
+                    templateUrl: '/views/authentication/contact.html'
+                })
+
     if (!$httpProvider.defaults.headers.get) {
         $httpProvider.defaults.headers.get = {};
     }

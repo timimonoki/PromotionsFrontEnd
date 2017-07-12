@@ -12,23 +12,6 @@ angular.module('jumboClient').service('GeoItem', ['Config', '$q', '$http', funct
 		return new task('', '', new Date(), '', '', null);
 	}
 
-	this.getShopLocations = function(){
-	    var deferred = $q.defer();
-	    $http({
-	            method: 'GET',
-	            url: 'http://localhost:8093/lidl/location',
-	            headers: {'Content-Type':'application/json'}
-	        }).then(function successCallback(response){
-	                console.log("Server response: ", response);
-	                deffered.resolve(response);
-	            },
-	            function errorCallback(error){
-	                console.log("Error: ", error);
-	            }
-	        );
-	        return deferred.promise;
-	}
-
 	this.insert = function(item){
 		var deferred = $q.defer();
 		$http({
@@ -76,5 +59,34 @@ angular.module('jumboClient').service('GeoItem', ['Config', '$q', '$http', funct
 		});
 		return deferred.promise;
 	}
+
+	this.getShopLocations = function(){
+    	    var deferred = $q.defer();
+    	    $http({
+    	            method: 'GET',
+    	            url: 'http://localhost:8093/lidl/location',
+    	            headers: {'Content-Type':'application/json'}
+    	        }).then(function successCallback(response){
+    	                deferred.resolve(response);
+    	            },
+    	            function errorCallback(error){
+    	                console.log("Error: ", error);
+    	            }
+    	        );
+    	        return deferred.promise;
+    	}
+
+	this.getAllShopsFromServer = function(pageNumber, size){
+            var deferred = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'http://localhost:8093/lidl/findShops'
+            }).then(function successCallback(response){
+                deferred.resolve(response);
+            },
+                function errorCallback(error){}
+            );
+            return deferred.promise;
+     }
 
 }]);
