@@ -1,0 +1,18 @@
+/*!
+ * Start Bootstrap - 4 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcnRmb2xpby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7R0FJRzs7QUFFSDtJQUNJLGtCQUFrQixDQUFDLHlIQUF5SDtDQUMvSTs7QUFFRDtJQUNJLG9CQUFvQjtDQUN2Qjs7QUFFRDtJQUNJLGVBQWU7Q0FDbEIiLCJmaWxlIjoicG9ydGZvbGlvLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxyXG4gKiBTdGFydCBCb290c3RyYXAgLSA0IENvbCBQb3J0Zm9saW8gKGh0dHA6Ly9zdGFydGJvb3RzdHJhcC5jb20vKVxyXG4gKiBDb3B5cmlnaHQgMjAxMy0yMDE2IFN0YXJ0IEJvb3RzdHJhcFxyXG4gKiBMaWNlbnNlZCB1bmRlciBNSVQgKGh0dHBzOi8vZ2l0aHViLmNvbS9CbGFja3JvY2tEaWdpdGFsL3N0YXJ0Ym9vdHN0cmFwL2Jsb2IvZ2gtcGFnZXMvTElDRU5TRSlcclxuICovXHJcblxyXG5ib2R5IHtcclxuICAgIHBhZGRpbmctdG9wOiA3MHB4OyAvKiBSZXF1aXJlZCBwYWRkaW5nIGZvciAubmF2YmFyLWZpeGVkLXRvcC4gUmVtb3ZlIGlmIHVzaW5nIC5uYXZiYXItc3RhdGljLXRvcC4gQ2hhbmdlIGlmIGhlaWdodCBvZiBuYXZpZ2F0aW9uIGNoYW5nZXMuICovXHJcbn1cclxuXHJcbi5wb3J0Zm9saW8taXRlbSB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyNXB4O1xyXG59XHJcblxyXG5mb290ZXIge1xyXG4gICAgbWFyZ2luOiA1MHB4IDA7XHJcbn0iXX0= */
